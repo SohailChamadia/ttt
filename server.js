@@ -37,7 +37,7 @@ app.get('/api/getwords/:value', function(request, response) {
 			var frequency = data[1]
 			var resp = []
 			if (value>uniq.length){
-				data.forEach(function(word){
+				uniq.forEach(function(word){
 					resp.push([word,frequency[word]])
 				})
 			}
