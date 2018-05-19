@@ -3,6 +3,7 @@ var app = express();
 const PORT = process.env.PORT || 5000;
 var axios = require('axios');
 var path = require('path');
+var serveStatic = require('serve-static');
 
 app.use(express.static(path.resolve(__dirname, './client/build')));
 app.use(serveStatic(path.join(__dirname, 'public')))
