@@ -4,6 +4,10 @@ const PORT = process.env.PORT || 5000;
 var axios = require('axios');
 var path = require('path');
 
+app.use(express.static(path.resolve(__dirname, './client/build')));
+app.use(serveStatic(path.join(__dirname, 'public')))
+
+
 function countWords(sentence) {
 	var frequency = {};
 	var words = sentence
