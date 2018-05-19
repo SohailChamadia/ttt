@@ -33,7 +33,7 @@ class CustomTable extends React.Component {
             tableData.map((prop,key) => {              
               return (
                 <tr>
-                  <th scope="row">{key}</th>
+                  <th scope="row">{key+1}</th>
                   {
                     prop.map((prop,key) => {
                       return(
